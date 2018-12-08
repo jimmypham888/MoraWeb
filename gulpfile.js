@@ -18,9 +18,9 @@ gulp.task('sass', function () {
                .pipe($.sass())
                .pipe($.postcss([autoprefixer({browsers: ['last 2 versions']}), mqpacker({sort: true}),
                                 assets({loadPaths: ['src/' + theme + 'assets/images/']})]))
-               .pipe($.sourcemaps.write('../sourcemap/', {
+               .pipe($.sourcemaps.write('/sourcemap/', {
                    includeContent: false,
-                   sourceRoot    : '../../scss/'
+                   sourceRoot    : './assets/scss/'
                }))
                .pipe($.lineEndingCorrector())
                .pipe(gulp.dest('src/' + theme + '/'))

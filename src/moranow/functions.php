@@ -1,5 +1,6 @@
 <?php
 
+// Enqueue styles
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
 	wp_enqueue_style( 'mora-style', get_stylesheet_directory_uri() . '/style.css', array( 'avada-stylesheet' ) );
@@ -29,16 +30,9 @@ function theme_enqueue_styles() {
 	}
 }
 
-add_action( 'after_setup_theme', 'moranow_setup' );
-function moranow_setup() {
-
-	// Topbar
-	add_filter( 'jobhunt_register_nav_menus', function() {
-		return array(
-			'primary-nav'		    => esc_html__( 'Primary Menu', 'jobhunt' ),
-			'handheld'				=> esc_html__( 'Handheld Menu', 'jobhunt' ),
-		);
-	});
+// Customize hooks
+add_action( 'after_setup_theme', 'moranow_update_hooks' );
+function moranow_update_hooks() {
 	remove_action( 'jobhunt_top_bar', 'jobhunt_top_bar', 10 );
 
 	// Header
@@ -47,10 +41,16 @@ function moranow_setup() {
 
 	add_action( 'jobhunt_header_v2', 'jobhunt_secondary_nav', 30 );
 
-	add_filter( 'jobhunt_secondary_nav_menu_titles', function( $menu_titles ) {
-		$menu_titles['user_page_text'] = wp_get_current_user()->display_name;
-		return $menu_titles;
-	});
+	// Homepage
+	remove_action( 'jobhunt_before_homepage_v1', 'jobhunt_home_v1_hook_control', 	  10 );
+	remove_action( 'jobhunt_homepage_v1', 'jobhunt_home_v1_job_categories_block',     20 );
+	remove_action( 'jobhunt_homepage_v1', 'jobhunt_home_v1_banner_v1',                30 );
+	remove_action( 'jobhunt_homepage_v1', 'jobhunt_home_v1_job_list_block',           40 );
+	remove_action( 'jobhunt_homepage_v1', 'jobhunt_home_v1_testimonial_block',        50 );
+	remove_action( 'jobhunt_homepage_v1', 'jobhunt_home_v1_company_info_carousel',    60 );
+	remove_action( 'jobhunt_homepage_v1', 'jobhunt_home_v1_recent_posts',             70 );
+	remove_action( 'jobhunt_homepage_v1', 'jobhunt_home_v1_banner_v2',                80 );
+	
 }
 
 add_action( 'widgets_init', 'moranow_widgets_init' );
@@ -65,6 +65,15 @@ function moranow_widgets_init() {
 	) );
 }
 
+// Top bar
+add_filter( 'jobhunt_register_nav_menus', 'moranow_register_nav_menus');
+function moranow_register_nav_menus() {
+	return array(
+		'primary-nav'		    => esc_html__( 'Primary Menu', 'jobhunt' ),
+		'handheld'				=> esc_html__( 'Handheld Menu', 'jobhunt' ),
+	);
+}
+
 add_action( 'jobhunt_top_bar', 'moranow_top_bar', 10 );
 function moranow_top_bar() {
 	if ( apply_filters( 'jobhunt_enable_top_bar', true ) ) : ?>
@@ -77,6 +86,7 @@ function moranow_top_bar() {
 	</div><!-- /.top-bar1 --><?php endif;
 }
 
+// Header
 add_action( 'jobhunt_header_v2', 'moranow_submit_resume', 40 );
 function moranow_submit_resume() {
 	if ( apply_filters( 'jobhunt_header_post_a_job_button', true ) && jobhunt_is_wp_job_manager_activated() ) :
@@ -90,4 +100,34 @@ function moranow_submit_resume() {
 			</a>
 		</div><?php
 	endif;
+}
+
+add_filter( 'jobhunt_secondary_nav_menu_titles', 'moranow_secondary_nav_menu_titles', 10, 1 );
+function moranow_secondary_nav_menu_titles( $menu_titles ) {
+	$menu_titles['user_page_text'] = wp_get_current_user()->display_name;
+	return $menu_titles;
+}
+
+// Home page
+add_filter( 'jobhunt_home_v1_data_tabs', 'moranow_home_v1_data_tabs', 10, 1 );
+function moranow_home_v1_data_tabs( $tabs ) {
+	unset( $tabs['job_categories_block'] );
+	unset( $tabs['banner_v1'] );
+	unset( $tabs['job_list_block'] );
+	unset( $tabs['testimonial_block'] );
+	unset( $tabs['company_info_carousel'] );
+	unset( $tabs['recent_posts'] );
+	unset( $tabs['banner_v2'] );
+	return $tabs;
+}
+
+add_action( 'jobhunt_before_homepage_v1', 'moranow_home_v1_hook_control', 10 );
+function moranow_home_v1_hook_control() {
+	if( is_page_template( array( 'template-homepage-v1.php' ) ) ) {
+		remove_all_actions( 'jobhunt_homepage_v1' );
+
+		$home_v1 = jobhunt_get_home_v1_meta();
+
+		add_action( 'jobhunt_homepage_v1',  'jobhunt_homepage_content', isset( $home_v1['hpc']['priority'] ) ? intval( $home_v1['hpc']['priority'] ) : 10 );
+	}
 }

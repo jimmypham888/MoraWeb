@@ -42,6 +42,7 @@ function moranow_update_hooks() {
 	add_action( 'jobhunt_header_v2', 'jobhunt_secondary_nav', 30 );
 
 	// Homepage
+	remove_action( 'jobhunt_before_content', 'jobhunt_home_v1_search_block', 10 );
 	remove_action( 'jobhunt_before_homepage_v1', 'jobhunt_home_v1_hook_control', 	  10 );
 	remove_action( 'jobhunt_homepage_v1', 'jobhunt_home_v1_job_categories_block',     20 );
 	remove_action( 'jobhunt_homepage_v1', 'jobhunt_home_v1_banner_v1',                30 );
@@ -130,4 +131,128 @@ function moranow_home_v1_hook_control() {
 
 		add_action( 'jobhunt_homepage_v1',  'jobhunt_homepage_content', isset( $home_v1['hpc']['priority'] ) ? intval( $home_v1['hpc']['priority'] ) : 10 );
 	}
+}
+
+add_action( 'jobhunt_before_content', 'moranow_home_v1_search_block', 10 );
+/**
+ * Display Search block
+ */
+function moranow_home_v1_search_block() {
+
+	if ( jobhunt_is_wp_job_manager_activated() ) {
+
+		$home_v1        = jobhunt_get_home_v1_meta();
+		$hsb_options    = $home_v1['hsb'];
+
+		$args =  apply_filters( 'jobhunt_home_v1_search_block_args', array(
+			'section_class'             => isset( $hsb_options['section_class'] ) ? $hsb_options['section_class'] : '',
+			'section_title'             => isset( $hsb_options['section_title'] ) ? $hsb_options['section_title'] : esc_html__( 'The Easiest Way to Get Your New Job', 'jobhunt' ),
+			'sub_title'                 => isset( $hsb_options['sub_title'] ) ? $hsb_options['sub_title'] : esc_html__( 'Find Jobs, Employment & Career Opportunities', 'jobhunt' ),
+			'search_placeholder_text'   => isset( $hsb_options['search_placeholder_text'] ) ? $hsb_options['search_placeholder_text'] : esc_html__( 'Job title, keywords or company name', 'jobhunt' ),
+			'location_placeholder_text' => isset( $hsb_options['location_placeholder_text'] ) ? $hsb_options['location_placeholder_text'] : esc_html__( 'City, province or region', 'jobhunt' ),
+			'show_category_select'      => isset( $hsb_options['show_category_select'] ) ? filter_var( $hsb_options['show_category_select'], FILTER_VALIDATE_BOOLEAN ) : false,
+			'category_select_text'      => isset( $hsb_options['category_select_text'] ) ? $hsb_options['category_select_text'] : esc_html__( 'Any Category', 'jobhunt' ),
+			'show_browse_button'        => isset( $hsb_options['show_browse_button'] ) ? filter_var( $hsb_options['show_browse_button'], FILTER_VALIDATE_BOOLEAN ) : false,
+			'browse_button_label'       => isset( $hsb_options['browse_button_label'] ) ? $hsb_options['browse_button_label'] : esc_html__( 'Or browse job offers by', 'jobhunt' ),
+			'browse_button_text'        => isset( $hsb_options['browse_button_text'] ) ? $hsb_options['browse_button_text'] : esc_html__( 'Category', 'jobhunt' ),
+			'browse_button_link'        => isset( $hsb_options['browse_button_link'] ) ? $hsb_options['browse_button_link'] : '#'
+		) );
+
+		moranow_home_search_block( $args );
+	}
+}
+
+/**
+ * Display Search block
+ */
+function moranow_home_search_block( $args = array() ) {
+
+	if ( jobhunt_is_wp_job_manager_activated() ) {
+		$defaults =  apply_filters( 'jobhunt_home_search_block_args', array(
+			'section_title'             => '',
+			'sub_title'                 => '',
+			'section_class'             => '',
+			'search_type'               => '',
+			'search_placeholder_text'   => esc_html__( 'Job title, keywords or company name', 'jobhunt' ),
+			'location_placeholder_text' => esc_html__( 'City, province or region', 'jobhunt' ),
+			'category_select_text'      => esc_html__( 'Any Category', 'jobhunt' ),
+			'show_category_select'      => true,
+			'show_browse_button'        => false,
+			'browse_button_label'       => esc_html__( 'Or browse job offers by', 'jobhunt' ),
+			'browse_button_text'        => esc_html__( 'Category', 'jobhunt' ),
+			'browse_button_link'        => '#'
+		) );
+
+		$args = wp_parse_args( $args, $defaults );
+
+		$section_class = empty( $args['section_class'] ) ? 'site-content-page-header' : 'site-content-page-header ' . $args['section_class'];
+
+		?><header class="<?php echo esc_attr( $section_class ); ?>" <?php echo jobhunt_site_content_bg_image(); ?>>
+
+			<div class="site-content-page-header-inner">
+
+				<?php
+					do_action( 'jobhunt_home_page_header_before' );
+
+					if( function_exists( 'jobhunt_resume_header_search_block' ) && $args['search_type'] == 'resume' ) {
+						jobhunt_resume_header_search_block( $args );
+					} else {
+						moranow_job_header_search_block( $args );
+					}
+
+					do_action( 'jobhunt_home_page_header_after' );
+				?>
+
+			</div>
+
+		</header><?php
+	}
+}
+
+/**
+ * Display Job Header Search block
+ */
+function moranow_job_header_search_block( $args = array() ) {
+
+	$defaults =  apply_filters( 'jobhunt_job_header_search_block_args', array(
+		'section_title'             => esc_html__( 'Explore Thousand Of Jobs With Just Simple Search...', 'jobhunt' ),
+		'sub_title'                 => '',
+		'search_placeholder_text'   => esc_html__( 'Job title, keywords or company name', 'jobhunt' ),
+		'location_placeholder_text' => esc_html__( 'City, province or region', 'jobhunt' ),
+		'category_select_text'      => esc_html__( 'Any Category', 'jobhunt' ),
+		'show_category_select'      => false,
+		'show_browse_button'        => false,
+		'browse_button_label'       => esc_html__( 'Or browse job offers by', 'jobhunt' ),
+		'browse_button_text'        => esc_html__( 'Category', 'jobhunt' ),
+		'browse_button_link'        => '#'
+	) );
+
+	$args = wp_parse_args( $args, $defaults );
+
+	extract( $args );
+
+	$jobs_page_id = jh_wpjm_get_page_id( 'jobs' );
+	$jobs_page_url = get_permalink( $jobs_page_id );
+
+	?><div class="job-search-block">
+
+		<?php do_action( 'jobhunt_job_header_search_block_before' ); ?>
+
+		<?php if ( ! empty( $section_title ) || ! empty( $sub_title ) ) : ?>
+		<div class="section-header">
+			<?php if ( ! empty( $section_title ) ) : ?>
+				<h3 class="section-title"><?php echo esc_html( $section_title ); ?></h3>
+			<?php endif; ?>
+			<?php if ( ! empty( $sub_title ) ) : ?>
+				<span class="section-sub-title"><?php echo esc_html( $sub_title ); ?></span>
+			<?php endif; ?>
+		</div>
+		<?php endif; ?>
+		<div class="job-search-form">
+			<a href="#">Tìm cố vấn</a>
+		</div>
+		
+		<?php do_action( 'jobhunt_job_header_search_block_after' ); ?>
+
+	</div><?php
 }

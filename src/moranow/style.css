@@ -44,6 +44,18 @@ a {
       border-color: #f2a106;
       background-color: #f2a106; }
 
+.job-search-form a {
+  font-weight: 700;
+  line-height: 40px;
+  border-radius: 4px;
+  padding: 15px 28px;
+  color: #022d39;
+  border: 2px solid #f2a106;
+  background-color: #f2a106; }
+  .job-search-form a:hover {
+    border-color: #fff;
+    background-color: transparent; }
+
 .top-bar {
   background-color: #022d39; }
   .top-bar .top-bar-inner {

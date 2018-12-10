@@ -1,8 +1,15 @@
 .top-bar {
+    display: block;
+    text-align: center;
     background-color: #022d39;
+    padding: 10px;
+
+    @media (min-width: 992px) {
+        padding: 0;
+    }
 
     .top-bar-inner {
-        height: 35px;
+        min-height: 35px;
         justify-content: center;
         align-items: center;
     }
@@ -19,11 +26,14 @@
     .widget_text .textwidget a {
         font-weight: 700;
         display: inline-block;
-        margin-left: 10px;
         color: #f2a106;
 
         &:hover {
             color: #fff;
+        }
+
+        @media (min-width: 992px) {
+            margin-left: 10px;
         }
     }
 }

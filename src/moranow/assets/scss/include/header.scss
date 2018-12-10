@@ -50,6 +50,14 @@
     }
 }
 
-.navbar-toggler {
-    background-color: transparent !important;
+.handheld-header {
+
+    .off-canvas-navigation-wrapper {
+        width: 96px;
+        padding-right: 0;
+    }
+
+    .navbar-toggler {
+        background-color: transparent !important;
+    }
 }

@@ -13,7 +13,7 @@
  */
 
 remove_action( 'jobhunt_before_content', 'jobhunt_site_content_header', 10 );
-add_action( 'jobhunt_before_content', 'jobhunt_home_v1_search_block', 10 );
+add_action( 'jobhunt_before_content', 'moranow_home_v1_search_block', 10 );
 add_action( 'jobhunt_home_page_header_after', 'jobhunt_home_scroll_button', 15 );
 
 do_action( 'jobhunt_before_homepage_v1' );

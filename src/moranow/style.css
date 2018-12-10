@@ -43,8 +43,31 @@ a {
       color: #022d39;
       border-color: #f2a106;
       background-color: #f2a106; }
+    .jobhunt-stick-this.stuck .submit-resume a {
+      color: #022d39;
+      border-color: #f2a106;
+      background-color: #f2a106; }
+    .jobhunt-stick-this.stuck .submit-resume a:hover {
+      color: #fff;
+      border-color: #022d39;
+      background-color: #022d39; }
 
-.job-search-form a {
+.job-search-block .section-title {
+  margin-bottom: 15px !important; }
+  .job-search-block .section-title:before {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+    margin: 0 auto 20px; }
+
+.job-search-block .section-sub-title {
+  font-weight: 700;
+  color: #fff !important; }
+
+.job-search-block a {
   font-weight: 700;
   line-height: 40px;
   border-radius: 4px;
@@ -52,9 +75,24 @@ a {
   color: #022d39;
   border: 2px solid #f2a106;
   background-color: #f2a106; }
-  .job-search-form a:hover {
+  .job-search-block a:hover {
     border-color: #fff;
     background-color: transparent; }
+
+.page-template-template-homepage-v1 .header-bg-default + .site-content-page-header:after {
+  background-color: #000;
+  background-image: none; }
+
+.how-it-works-section .step:before {
+  display: none; }
+
+.how-it-works-section .step i {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease; }
+
+.how-it-works-section .step .step-info {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
 
 .top-bar {
   background-color: #022d39; }
@@ -78,5 +116,11 @@ a {
     color: #f2a106; }
     .top-bar .widget_text .textwidget a:hover {
       color: #fff; }
+    @media (min-width: 768px) {
+  .how-it-works-section .step {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+    max-width: 20%; } }
 
 /*# sourceMappingURL=sourcemap/style.css.map */

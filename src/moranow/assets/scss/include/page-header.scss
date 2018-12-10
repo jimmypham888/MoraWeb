@@ -1,0 +1,43 @@
+
+
+.job-search-block {
+
+    .section-title {
+        margin-bottom: 15px !important;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 35px;
+            height: 4px;
+            border-radius: 4px;
+            background-color: #fff;
+            margin: 0 auto 20px;
+        }
+    }
+
+    .section-sub-title {
+        font-weight: 700;
+        color: #fff !important;
+    }
+    
+    a {
+        font-weight: 700;
+        line-height: 40px;
+        border-radius: 4px;
+        padding: 15px 28px;
+        color: #022d39;
+        border: 2px solid #f2a106;
+        background-color: #f2a106;
+
+        &:hover {
+            border-color: #fff;
+            background-color: transparent;
+        }
+    }
+}
+
+.page-template-template-homepage-v1 .header-bg-default + .site-content-page-header:after {
+    background-color: #000;
+    background-image: none;
+}

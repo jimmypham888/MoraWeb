@@ -7,6 +7,15 @@ Template:       jobhunt
 Version:        1.0.0
 Text Domain:    moranow
 */
+.site-footer .footer-widgets {
+  background-color: #062d39; }
+
+.site-footer .footer-copyright-bar {
+  background-color: #041f27; }
+
+.site-footer .footer-copyright-bar-inner {
+  height: 60px; }
+
 a {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }

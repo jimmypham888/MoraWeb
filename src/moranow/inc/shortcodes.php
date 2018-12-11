@@ -3,7 +3,7 @@
 add_shortcode( 'moranow_how_it_works_block' , 'moranow_how_it_works_block_element' );
 if ( ! function_exists( 'moranow_how_it_works_block_element' ) ) {
 
-    function moranow_how_it_works_block_element( $atts, $content = null ){
+    function moranow_how_it_works_block_element( $atts, $content = null ) {
 
         extract(shortcode_atts(array(
             'section_title'     => '',
@@ -76,4 +76,54 @@ if ( ! function_exists( 'moranow_how_it_works_block_element' ) ) {
 
         return $html;
     }
+}
+
+add_shortcode( 'moranow_benefit_block' , 'moranow_benefit_block_element' );
+if ( ! function_exists( 'moranow_benefit_block_element' ) ) {
+
+    function moranow_benefit_block_element( $atts, $content = null ) {
+
+        extract(shortcode_atts(array(
+            'image'         => '',
+            'block_title'   => '',
+            'content'       => '',
+            'button_text'   => '',
+            'button_link'   => '',
+            'el_class'      => ''
+        ), $atts));
+
+        $args = array(
+            'image'        => $image,
+            'block_title'  => $block_title,
+            'content'      => $content,
+            'button_text'  => $button_text,
+            'button_link'  => $button_link,
+            'block_class'  => $el_class
+        );
+
+        $html = '';
+        if( function_exists( 'moranow_benefit_block' ) ) {
+            ob_start();
+            moranow_benefit_block( $args );
+            $html = ob_get_clean();
+        }
+
+        return $html;
+    }
+}
+
+function moranow_benefit_block( $args = array() ) {
+
+    $defaults =  array(
+        'image'        => '',
+        'block_title'  => '',
+        'content'      => '',
+        'button_text'  => '',
+        'button_link'  => '',
+        'block_class'  => ''
+    );
+
+    $args = wp_parse_args( $args, $defaults );
+
+    jobhunt_get_template( 'benefit-block.php', $args );
 }

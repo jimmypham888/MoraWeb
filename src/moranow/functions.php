@@ -53,7 +53,6 @@ function moranow_update_hooks() {
 	remove_action( 'jobhunt_homepage_v1', 'jobhunt_home_v1_company_info_carousel',    60 );
 	remove_action( 'jobhunt_homepage_v1', 'jobhunt_home_v1_recent_posts',             70 );
 	remove_action( 'jobhunt_homepage_v1', 'jobhunt_home_v1_banner_v2',                80 );
-	
 }
 
 add_action( 'widgets_init', 'moranow_widgets_init' );

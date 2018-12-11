@@ -99,6 +99,10 @@ a {
   background-color: #000;
   background-image: none; }
 
+.kc-elm .section-header .section-title {
+  font-size: 34px;
+  color: #022d39; }
+
 .how-it-works-section .step:before {
   display: none; }
 
@@ -128,12 +132,12 @@ a {
   .kc-carousel-images.carousel-box-shadow .owl-controls .owl-page span.active {
     background-color: #919191; }
 
+.testimonial-block .section-title {
+  color: #fff !important; }
+
 .testimonial-block:after {
   opacity: .5 !important;
   background-color: #000 !important; }
-
-.testimonial-block .section-title {
-  font-size: 34px; }
 
 .testimonial-block .customer-info-inner {
   margin-top: 35px !important; }

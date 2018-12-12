@@ -140,7 +140,8 @@
         @media (min-width: 1200px) {
             display: inline-block;
             vertical-align: top;
-            width: 270px;
+            flex: 1;
+            max-width: 265px;
         }
     }
 
@@ -159,13 +160,13 @@
 
     .benefit-block-text {
         text-align: left;
-        padding: 30px 0 30px 30px;
+        padding: 35px 15px 30px 25px;
         color: #022d39;
 
         @media (min-width: 1200px) {
             display: inline-block;
             vertical-align: top;
-            width: calc(100% - 276px);
+            width: calc(100% - 265px);
         }
     }
 
@@ -185,6 +186,7 @@
         padding: 0;
 
         li {
+            font-size: 12px;
             line-height: 1.5;
             margin-bottom: 5px;
         }
@@ -206,7 +208,7 @@
         line-height: 1.5;
         border-radius: 6px;
         font-weight: 700;
-        padding: 15px 23px;
+        padding: 10px 20px;
         color: #022d39;
         background-color: #f2a106;
 

@@ -139,24 +139,17 @@ a {
   opacity: .5 !important;
   background-color: #000 !important; }
 
-.testimonial-block .customer-profile-image {
-  top: -115px !important; }
-
 .testimonial-block .customer-info-inner {
-  display: block !important;
   margin-top: 35px !important; }
 
 .testimonial-block .customer-name {
-  font-size: 24px;
-  width: 100%;
-  margin-bottom: 5px; }
+  font-size: 24px; }
 
 .testimonial-block .customer-designation {
   display: block;
-  width: 100%;
   font-weight: 700;
   margin: 0 !important;
-  color: #f2a106 !important; }
+  color: #f2a106; }
 
 .jh-recent-articles {
   background-color: #f4f7f8 !important;

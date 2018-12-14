@@ -256,3 +256,10 @@ function moranow_job_header_search_block( $args = array() ) {
 
 	</div><?php
 }
+
+// Remove unused post type
+add_action('init', 'remove_post_type');
+
+function remove_post_type() {
+    unregister_post_type( 'company' );
+}

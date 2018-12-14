@@ -181,4 +181,33 @@ $shortcode_params['moranow_benefit_block'] = array(
     )
 );
 
+$shortcode_params['moranow_counselor_block'] = array(
+    'name' => esc_html__( 'Counselor Block (by Moranow)', 'moranow' ),
+    'description' => esc_html__( 'Counselor Block', 'moranow' ),
+    'category' => esc_html__( 'Moranow Elements', 'moranow' ),
+    'icon' => '',
+    'title' => esc_html__( 'Counselor Block Settings', 'moranow' ),
+    'params' => array(
+        array(
+            'name'          => 'columns',
+            'label'         => esc_html__('Columns', 'moranow'),
+            'type'          => 'number_slider',
+            'options' => array(
+                'min'        => 3,
+                'max'        => 5,
+                'show_input' => true
+            ),
+            'value'         => 5,
+            'description'   => esc_html__('Enter number of columns', 'moranow'),
+            'admin_label'   => true
+        ),
+        array(
+            'name'          => 'el_class',
+            'label'         => esc_html__('Extra class name', 'moranow'),
+            'type'          => 'text',
+            'description'   => esc_html__('If you wish to style particular content element differently, please add a class name to this field and refer to it in your custom CSS file.', 'moranow')
+        )
+    )
+);
+
 $kc->add_map( $shortcode_params );

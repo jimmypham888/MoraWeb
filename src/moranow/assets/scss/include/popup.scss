@@ -1,0 +1,61 @@
+#sgpb-popup-dialog-main-div {
+    padding: 0 !important;
+    box-shadow: none !important;
+    border-radius: 6px !important;
+    max-height: none !important;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .mc4wp-form {
+        text-align: center;
+        padding: 40px;
+    }
+
+    h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+
+        + p {
+            margin-bottom: 15px;
+        }
+    }
+
+    .form-wrapper {
+        display: grid;
+        grid-template-columns: 100%;
+        margin-left: -5px;
+        margin-right: -5px;
+
+        @media (min-width: 768px) {
+            grid-template-columns: 50% 50%;
+        }
+    }
+
+    .form-input {
+        padding: 0 5px;
+        margin-bottom: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        border-color: #eeeeee;
+        background-color: #eeeeee;
+    }
+
+    input[type="submit"] {
+        font-weight: 700;
+        width: 100%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        color: #022d39;
+        background-color: #f2a106;
+
+        &:hover {
+            color: #fff;
+            border-color: #022d39;
+            background-color: #022d39;
+        }
+    }
+}

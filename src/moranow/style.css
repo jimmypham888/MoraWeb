@@ -99,6 +99,46 @@ a {
   background-color: #000;
   background-image: none; }
 
+#sgpb-popup-dialog-main-div {
+  padding: 0 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border-radius: 6px !important;
+  max-height: none !important; }
+  #sgpb-popup-dialog-main-div p {
+    margin-bottom: 0; }
+  #sgpb-popup-dialog-main-div .mc4wp-form {
+    text-align: center;
+    padding: 40px; }
+  #sgpb-popup-dialog-main-div h3 {
+    margin-top: 0;
+    margin-bottom: 10px; }
+    #sgpb-popup-dialog-main-div h3 + p {
+      margin-bottom: 15px; }
+  #sgpb-popup-dialog-main-div .form-wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-left: -5px;
+    margin-right: -5px; }
+  #sgpb-popup-dialog-main-div .form-input {
+    padding: 0 5px;
+    margin-bottom: 15px; }
+  #sgpb-popup-dialog-main-div input[type="text"],
+  #sgpb-popup-dialog-main-div input[type="email"] {
+    border-color: #eeeeee;
+    background-color: #eeeeee; }
+  #sgpb-popup-dialog-main-div input[type="submit"] {
+    font-weight: 700;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #022d39;
+    background-color: #f2a106; }
+    #sgpb-popup-dialog-main-div input[type="submit"]:hover {
+      color: #fff;
+      border-color: #022d39;
+      background-color: #022d39; }
+
 .kc-elm .section-header .section-title {
   font-size: 34px;
   color: #022d39; }
@@ -292,6 +332,8 @@ a {
     .top-bar .widget_text .textwidget a:hover {
       color: #fff; }
     @media (min-width: 768px) {
+      #sgpb-popup-dialog-main-div .form-wrapper {
+        grid-template-columns: 50% 50%; }
   .how-it-works-section .step {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 20%;

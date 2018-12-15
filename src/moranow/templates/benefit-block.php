@@ -10,11 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
 
-$block_class = empty( $block_class ) ? 'benefit-block' : 'benefit-block ' . $section_class;
-
-if ( ! empty( $animation ) ) {
-    $block_class .= ' animate-in-view';
-}
+$block_class = empty( $block_class ) ? 'benefit-block' : 'benefit-block ' . $el_class;
 
 $link_array = explode('|', $button_link);
 

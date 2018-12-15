@@ -127,3 +127,30 @@ function moranow_benefit_block( $args = array() ) {
 
     jobhunt_get_template( 'benefit-block.php', $args );
 }
+
+add_shortcode( 'moranow_counselor_block' , 'moranow_counselor_block_element' );
+if ( ! function_exists( 'moranow_counselor_block_element' ) ) {
+    function moranow_counselor_block_element( $atts, $content = null ) {
+
+        extract(shortcode_atts(array(
+            'columns'       => '',
+            'perpage'       => '',
+            'el_class'      => ''
+        ), $atts));
+
+        $args = array(
+            'columns'      => $columns,
+            'perpage'      => $perpage,
+            'block_class'  => $el_class
+        );
+
+        $html = '';
+        if( function_exists( 'moranow_benefit_block' ) ) {
+            ob_start();
+            jobhunt_get_template( 'counselor-block.php', $args );
+            $html = ob_get_clean();
+        }
+
+        return $html;
+    }
+}

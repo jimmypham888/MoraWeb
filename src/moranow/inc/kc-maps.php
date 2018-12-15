@@ -189,6 +189,12 @@ $shortcode_params['moranow_counselor_block'] = array(
     'title' => esc_html__( 'Counselor Block Settings', 'moranow' ),
     'params' => array(
         array(
+            'name'          => 'perpage',
+            'label'         => esc_html__('Number of counselor', 'moranow'),
+            'value'         => 15,
+            'type'          => 'text',
+        ),
+        array(
             'name'          => 'columns',
             'label'         => esc_html__('Columns', 'moranow'),
             'type'          => 'number_slider',

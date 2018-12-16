@@ -294,19 +294,24 @@ body:not(.home) .site-content-page-header .site-content-page-header-inner {
 
 .counselor-block {
   display: grid;
-  grid-template-columns: 50% 50%;
-  clear: both;
-  margin-left: -20px;
-  margin-right: -20px; }
+  grid-template-columns: 100%;
+  clear: both; }
   .counselor-block .counselor-wrapper {
     text-align: center;
-    margin-bottom: 40px; }
-    .counselor-block .counselor-wrapper:hover .counselor-inner {
-      -webkit-box-shadow: 2px 19px 29px 0px rgba(0, 0, 0, 0.17);
-              box-shadow: 2px 19px 29px 0px rgba(0, 0, 0, 0.17); }
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    padding: 10px; }
+    .counselor-block .counselor-wrapper:hover {
+      -webkit-transform: translateY(-20px);
+              transform: translateY(-20px); }
+      .counselor-block .counselor-wrapper:hover .counselor-inner {
+        -webkit-box-shadow: 2px 0 23px 0 rgba(0, 0, 0, 0.13);
+                box-shadow: 2px 0 23px 0 rgba(0, 0, 0, 0.13); }
   .counselor-block .counselor-inner {
     border-radius: 4px;
-    padding: 20px;
+    -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.13);
+            box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.13);
+    padding: 0;
     -webkit-transition: all .5s ease;
     transition: all .5s ease; }
   .counselor-block .counselor-image {
@@ -315,13 +320,43 @@ body:not(.home) .site-content-page-header .site-content-page-header-inner {
     margin-bottom: 20px; }
   .counselor-block .counselor-name {
     margin-top: 0;
-    margin-bottom: 0; }
+    margin-bottom: 3px; }
     .counselor-block .counselor-name a {
       color: #022d39; }
   .counselor-block .counselor-title {
-    font-size: 12px;
     font-weight: 700;
     color: #f2a106; }
+  .counselor-block .counselor-details {
+    text-align: left;
+    display: table;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    color: #888; }
+    .counselor-block .counselor-details > div {
+      margin-bottom: 10px; }
+    .counselor-block .counselor-details i {
+      display: table-cell;
+      vertical-align: top;
+      font-size: 20px;
+      padding-right: 15px; }
+    .counselor-block .counselor-details span {
+      display: table-cell;
+      vertical-align: top; }
+    .counselor-block .counselor-details a {
+      color: #888; }
+      .counselor-block .counselor-details a:hover {
+        color: #f2a106; }
+  .counselor-block .view-resume-action {
+    font-weight: 700;
+    padding: 20px 0;
+    border-top: 1px solid #eee; }
+    .counselor-block .view-resume-action i {
+      font-size: 16px;
+      vertical-align: middle;
+      margin-left: 12px; }
+    .counselor-block .view-resume-action a:hover {
+      color: #f2a106; }
 
 .top-bar {
   display: block;
@@ -408,6 +443,10 @@ body:not(.home) .site-content-page-header .site-content-page-header-inner {
   margin-left: 0 !important;
   margin-right: 12px; }
 
+@media (min-width: 576px) {
+    .counselor-block {
+      grid-template-columns: 50% 50%; } }
+
 @media (min-width: 768px) {
       #sgpb-popup-dialog-main-div .form-wrapper {
         grid-template-columns: 50% 50%; }
@@ -423,6 +462,8 @@ body:not(.home) .site-content-page-header .site-content-page-header-inner {
       margin-bottom: 0; }
     .counselor-block {
       grid-template-columns: 33.3333% 33.3333% 33.3333%; }
+      .counselor-block .counselor-wrapper {
+        padding: 20px; }
   .jh-resumes .resume-inner {
     padding: 0; }
     .jh-resumes .candidate-image {

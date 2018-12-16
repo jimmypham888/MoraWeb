@@ -323,7 +323,7 @@ function moranow_template_candidate_info() {
 	<div class="counselor-title">
 		<i class="la la-user"></i><?php echo 'Nghề nghiệp: ' . get_post_meta(get_the_ID(), '_candidate_title', true); ?>
 	</div>
-		<?php if (isset($edu)) : ?>
+	<?php if (isset($edu)) : ?>
 		<div class="counselor-degree">
 			<i class="la la-bookmark"></i><?php echo 'Degree: ' . $edu['qualification']; ?>
 		</div>

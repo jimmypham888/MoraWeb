@@ -229,25 +229,29 @@
 
 .counselor-block {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
     clear: both;
-    margin-left: -20px;
-    margin-right: -20px;
+    // margin-left: -20px;
+    // margin-right: -20px;
 
     .counselor-wrapper {
         text-align: center;
-        margin-bottom: 40px;
+        transition: all .5s ease;
+        padding: 10px;
 
         &:hover {
+            transform: translateY(-20px);
+
             .counselor-inner {
-                box-shadow: 2px 19px 29px 0px rgba(0, 0, 0, .17);
+                box-shadow: 2px 0 23px 0 rgba(0, 0, 0, .13);
             }
         }
     }
 
     .counselor-inner {
         border-radius: 4px;
-        padding: 20px;
+        box-shadow: 0 0 18px 0 rgba(0, 0, 0, .13);
+        padding: 0;
         transition: all .5s ease;
     }
 
@@ -259,7 +263,7 @@
 
     .counselor-name {
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 3px;
 
         a {
             color: #022d39;
@@ -267,13 +271,69 @@
     }
 
     .counselor-title {
-        font-size: 12px;
         font-weight: 700;
         color: #f2a106;
     }
 
+    .counselor-details {
+        text-align: left;
+        display: table;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+        color: #888;
+
+        > div {
+            margin-bottom: 10px;
+        }
+
+        i {
+            display: table-cell;
+            vertical-align: top;
+            font-size: 20px;
+            padding-right: 15px;
+        }
+
+        span {
+            display: table-cell;
+            vertical-align: top;
+        }
+
+        a {
+            color: #888;
+
+            &:hover {
+                color: #f2a106;
+            }
+        }
+    }
+
+    .view-resume-action {
+        font-weight: 700;
+        padding: 20px 0;
+        border-top: 1px solid #eee;
+
+        i {
+            font-size: 16px;
+            vertical-align: middle;
+            margin-left: 12px;
+        }
+
+        a:hover {
+            color: #f2a106;
+        }
+    }
+
+    @media (min-width: 576px) {
+        grid-template-columns: 50% 50%;
+    }
+
     @media (min-width: 768px) {
         grid-template-columns: 33.3333% 33.3333% 33.3333%;
+
+        .counselor-wrapper {
+            padding: 20px;
+        }
     }
 
     @media (min-width: 992px) {

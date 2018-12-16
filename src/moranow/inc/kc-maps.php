@@ -191,7 +191,7 @@ $shortcode_params['moranow_counselor_block'] = array(
         array(
             'name'          => 'perpage',
             'label'         => esc_html__('Number of counselor', 'moranow'),
-            'value'         => 15,
+            'value'         => 8,
             'type'          => 'text',
         ),
         array(
@@ -203,7 +203,7 @@ $shortcode_params['moranow_counselor_block'] = array(
                 'max'        => 5,
                 'show_input' => true
             ),
-            'value'         => 5,
+            'value'         => 4,
             'description'   => esc_html__('Enter number of columns', 'moranow'),
             'admin_label'   => true
         ),

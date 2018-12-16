@@ -1,0 +1,125 @@
+.jobhunt-wpjm-widget-layered-nav-list .jobhunt-wpjm-widget-layered-nav-list__item.chosen a:before, .jobhunt-wpjmc-widget-layered-nav-list .jobhunt-wpjmc-widget-layered-nav-list__item.chosen a:before, .jobhunt-wpjmr-widget-layered-nav-list .jobhunt-wpjmr-widget-layered-nav-list__item.chosen a:before {
+    color: #022d39;
+}
+
+.jobhunt-wpjmr-search button,
+.widget-area .jobhunt-wpjmr-location-search button {
+    color: #022d39;
+}
+
+.jh-resumes .resume + .resume {
+    border-top: none;
+}
+
+.jh-resumes {
+
+    .resume {
+        box-shadow: 0 0 18px 0 rgba(0, 0, 0, .13);
+        margin-bottom: 20px;
+        transition: all .5s ease;
+
+        &:hover .view-resume-action a {
+            color: #fff;
+            border-color: #062d38;
+            background-color: #062d38;
+        }
+    }
+
+    .resume-inner {
+
+        @media (min-width: 768px) {
+            padding: 0;
+        }
+    }
+
+    .candidate-image {
+        width: 50%;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            padding: 30px 0;
+            border-right: 1px solid #eee;
+        }
+    
+        .counselor-name {
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 5px;
+
+            a {
+                color: #062d38;
+            }
+        }
+
+        img {
+            margin-bottom: 20px;
+        }
+
+        .counselor-age {
+            font-weight: 700;
+            color: #f2a106;
+        }
+    }
+
+    .candidate-details {
+        color: #062d38;
+
+        @media (min-width: 768px) {
+            padding: 30px 0;
+        }
+
+        > div {
+            margin-bottom: 5px;
+        }
+        
+        i {
+            font-size: 20px;
+            color: #062d38;
+            margin-right: 15px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .view-resume-action {
+
+        @media (min-width: 768px) {
+            margin-right: -25px;
+        }
+
+        a {
+            border-color: #f2a106;
+            background-color: #f2a106;
+            justify-content: center;
+
+            &:hover {
+                color: #fff;
+            }
+
+            @media (min-width: 768px) {
+                font-size: 0;
+                height: 50px;
+                width: 50px;
+                min-width: 0;
+                border-radius: 100%;
+            }
+        }
+
+        i {
+            margin-left: 0 !important;
+            margin-right: 12px;
+
+            @media (min-width: 768px) {
+                margin: 0 !important;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .post-type-archive-job_listing.type-list.left-sidebar .content-area,
+    .post-type-archive-resume.resume-type-v1.left-sidebar .content-area,
+    .post-type-archive-resume.resume-type-v2.left-sidebar .content-area {
+        border-left: none;
+    }
+}

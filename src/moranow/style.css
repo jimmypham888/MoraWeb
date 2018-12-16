@@ -68,6 +68,22 @@ a {
 .handheld-header .navbar-toggler {
   background-color: transparent !important; }
 
+.site-content-page-header:after {
+  background-image: none !important;
+  background-color: rgba(0, 0, 0, 0.5) !important; }
+
+.site-content-page-header .site-content-page-header-inner {
+  padding-top: 0; }
+
+.site-content-page-header .site-content-page-title:before {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  margin: 0 auto 20px; }
+
 .job-search-block {
   text-align: center; }
   .job-search-block .section-title {
@@ -331,7 +347,68 @@ a {
     color: #f2a106; }
     .top-bar .widget_text .textwidget a:hover {
       color: #fff; }
-    @media (min-width: 768px) {
+
+.jobhunt-wpjm-widget-layered-nav-list .jobhunt-wpjm-widget-layered-nav-list__item.chosen a:before, .jobhunt-wpjmc-widget-layered-nav-list .jobhunt-wpjmc-widget-layered-nav-list__item.chosen a:before, .jobhunt-wpjmr-widget-layered-nav-list .jobhunt-wpjmr-widget-layered-nav-list__item.chosen a:before {
+  color: #022d39; }
+
+.jobhunt-wpjmr-search button,
+.widget-area .jobhunt-wpjmr-location-search button {
+  color: #022d39; }
+
+.jh-resumes .resume + .resume {
+  border-top: none; }
+
+.jh-resumes .resume {
+  -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.13);
+          box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.13);
+  margin-bottom: 20px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease; }
+  .jh-resumes .resume:hover .view-resume-action a {
+    color: #fff;
+    border-color: #062d38;
+    background-color: #062d38; }
+
+.jh-resumes .candidate-image {
+  width: 50%;
+  text-align: center; }
+  .jh-resumes .candidate-image .counselor-name {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 5px; }
+    .jh-resumes .candidate-image .counselor-name a {
+      color: #062d38; }
+  .jh-resumes .candidate-image img {
+    margin-bottom: 20px; }
+  .jh-resumes .candidate-image .counselor-age {
+    font-weight: 700;
+    color: #f2a106; }
+
+.jh-resumes .candidate-details {
+  color: #062d38; }
+  .jh-resumes .candidate-details > div {
+    margin-bottom: 5px; }
+  .jh-resumes .candidate-details i {
+    font-size: 20px;
+    color: #062d38;
+    margin-right: 15px;
+    display: inline-block;
+    vertical-align: middle; }
+
+.jh-resumes .view-resume-action a {
+  border-color: #f2a106;
+  background-color: #f2a106;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .jh-resumes .view-resume-action a:hover {
+    color: #fff; }
+
+.jh-resumes .view-resume-action i {
+  margin-left: 0 !important;
+  margin-right: 12px; }
+
+@media (min-width: 768px) {
       #sgpb-popup-dialog-main-div .form-wrapper {
         grid-template-columns: 50% 50%; }
   .how-it-works-section .step {
@@ -345,8 +422,26 @@ a {
     .benefit-block {
       margin-bottom: 0; }
     .counselor-block {
-      grid-template-columns: 33.3333% 33.3333% 33.3333%; } }
-    @media (min-width: 992px) {
+      grid-template-columns: 33.3333% 33.3333% 33.3333%; }
+  .jh-resumes .resume-inner {
+    padding: 0; }
+    .jh-resumes .candidate-image {
+      padding: 30px 0;
+      border-right: 1px solid #eee; }
+    .jh-resumes .candidate-details {
+      padding: 30px 0; }
+  .jh-resumes .view-resume-action {
+    margin-right: -25px; }
+    .jh-resumes .view-resume-action a {
+      font-size: 0;
+      height: 50px;
+      width: 50px;
+      min-width: 0;
+      border-radius: 100%; }
+    .jh-resumes .view-resume-action i {
+      margin: 0 !important; } }
+
+@media (min-width: 992px) {
     .counselor-block.columns-3 {
       grid-template-columns: 33.3333% 33.3333% 33.3333%; }
     .counselor-block.columns-4 {
@@ -356,8 +451,13 @@ a {
     .top-bar {
       padding: 0; }
       .top-bar .widget_text .textwidget a {
-        margin-left: 10px; } }
-    @media (min-width: 1200px) {
+        margin-left: 10px; }
+  .post-type-archive-job_listing.type-list.left-sidebar .content-area,
+  .post-type-archive-resume.resume-type-v1.left-sidebar .content-area,
+  .post-type-archive-resume.resume-type-v2.left-sidebar .content-area {
+    border-left: none; } }
+
+@media (min-width: 1200px) {
       .benefit-block img {
         opacity: 0;
         visibility: hidden; }
@@ -377,10 +477,12 @@ a {
         display: inline-block;
         vertical-align: top;
         width: calc(100% - 265px); } }
-    @media (max-width: 1199.98px) {
+
+@media (max-width: 1199.98px) {
   .header-transparent + .site-content-page-header {
     margin-top: -75px; } }
-    @media (max-width: 1199px) {
+
+@media (max-width: 1199px) {
       .benefit-block .benefit-block-image {
         background-image: none !important; } }
 

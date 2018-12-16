@@ -61,3 +61,25 @@
         background-color: transparent !important;
     }
 }
+
+.site-content-page-header {
+
+    &:after {
+        background-image: none !important;
+        background-color: rgba(0, 0, 0, .5) !important;
+    }
+
+    .site-content-page-header-inner {
+        padding-top: 0;
+    }
+
+    .site-content-page-title:before {
+        content: '';
+        display: block;
+        width: 35px;
+        height: 4px;
+        border-radius: 4px;
+        background-color: #fff;
+        margin: 0 auto 20px;
+    }
+}

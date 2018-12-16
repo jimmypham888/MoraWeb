@@ -308,6 +308,7 @@ body:not(.home) .site-content-page-header .site-content-page-header-inner {
         -webkit-box-shadow: 2px 0 23px 0 rgba(0, 0, 0, 0.13);
                 box-shadow: 2px 0 23px 0 rgba(0, 0, 0, 0.13); }
   .counselor-block .counselor-inner {
+    overflow: hidden;
     border-radius: 4px;
     -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.13);
             box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.13);
@@ -316,7 +317,6 @@ body:not(.home) .site-content-page-header .site-content-page-header-inner {
     transition: all .5s ease; }
   .counselor-block .counselor-image {
     display: block;
-    border-radius: 4px;
     margin-bottom: 20px; }
   .counselor-block .counselor-name {
     margin-top: 0;

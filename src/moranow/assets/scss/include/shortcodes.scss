@@ -231,8 +231,6 @@
     display: grid;
     grid-template-columns: 100%;
     clear: both;
-    // margin-left: -20px;
-    // margin-right: -20px;
 
     .counselor-wrapper {
         text-align: center;
@@ -249,6 +247,7 @@
     }
 
     .counselor-inner {
+        overflow: hidden;
         border-radius: 4px;
         box-shadow: 0 0 18px 0 rgba(0, 0, 0, .13);
         padding: 0;
@@ -257,7 +256,6 @@
 
     .counselor-image {
         display: block;
-        border-radius: 4px;
         margin-bottom: 20px;
     }
 

@@ -72,7 +72,7 @@ a {
   background-image: none !important;
   background-color: rgba(0, 0, 0, 0.5) !important; }
 
-.site-content-page-header .site-content-page-header-inner {
+body:not(.home) .site-content-page-header .site-content-page-header-inner {
   padding-top: 0; }
 
 .site-content-page-header .site-content-page-title:before {

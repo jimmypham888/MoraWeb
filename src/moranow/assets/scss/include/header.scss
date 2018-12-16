@@ -69,8 +69,10 @@
         background-color: rgba(0, 0, 0, .5) !important;
     }
 
-    .site-content-page-header-inner {
-        padding-top: 0;
+    body:not(.home) & {
+        .site-content-page-header-inner {
+            padding-top: 0;
+        }
     }
 
     .site-content-page-title:before {

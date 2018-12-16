@@ -59,7 +59,7 @@ $counselors = new WP_Query($args);
                         </div>
                     </div>
                     <div class="view-resume-action">
-                        <a href="<?php the_resume_permalink(); ?>"><?php echo esc_html__( 'Xem thêm', 'jobhunt' ); ?><i class="la la-arrow-right"></i></a>
+                        <a href="<?php the_resume_permalink(); ?>"><?php echo esc_html__( 'Xem chi tiết', 'jobhunt' ); ?><i class="la la-arrow-right"></i></a>
                     </div>
                 </div>
             </div>

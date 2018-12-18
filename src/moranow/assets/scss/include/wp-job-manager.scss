@@ -123,3 +123,52 @@
         border-left: none;
     }
 }
+
+.resume-single-type-v1 {
+
+    .single-resume-inner .single-candidate-head-left {
+        justify-content: flex-end;
+    }
+
+    .single-candidate-head-right .booking-button {
+        align-self: center;
+
+        @media (min-width: 1200px) {
+            align-self: flex-end;
+        }
+
+        a {
+            font-family: "Quicksand",sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 2;
+            display: flex;
+            align-items: center;
+            vertical-align: middle;
+            border-radius: 4px;
+            padding: 8px 40px;
+            border: 2px solid #022d39;
+        }
+
+        i {
+            font-size: 20px;
+            padding-left: 8px;
+            color: #f2a106;
+            transition: all .5s ease;
+        }
+
+        a:hover {
+            background-color: #022d39;
+            color: #fff;
+
+            i {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.single-resume-head:before:before {
+    background-image: none !important;
+    background-color: rgba(0, 0, 0, .5) !important;
+}

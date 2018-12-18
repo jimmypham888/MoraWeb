@@ -308,6 +308,17 @@ body:not(.home) .site-content-page-header .site-content-page-header-inner {
         -webkit-box-shadow: 2px 0 23px 0 rgba(0, 0, 0, 0.13);
                 box-shadow: 2px 0 23px 0 rgba(0, 0, 0, 0.13); }
   .counselor-block .counselor-inner {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     overflow: hidden;
     border-radius: 4px;
     -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.13);
@@ -323,15 +334,16 @@ body:not(.home) .site-content-page-header .site-content-page-header-inner {
     margin-bottom: 3px; }
     .counselor-block .counselor-name a {
       color: #022d39; }
+  .counselor-block .counselor-info {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px; }
   .counselor-block .counselor-title {
     font-weight: 700;
     color: #f2a106; }
   .counselor-block .counselor-details {
     text-align: left;
     display: table;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 30px;
     color: #888; }
     .counselor-block .counselor-details > div {
       margin-bottom: 10px; }
@@ -443,6 +455,45 @@ body:not(.home) .site-content-page-header .site-content-page-header-inner {
   margin-left: 0 !important;
   margin-right: 12px; }
 
+.resume-single-type-v1 .single-resume-inner .single-candidate-head-left {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.resume-single-type-v1 .single-candidate-head-right .booking-button {
+  -ms-flex-item-align: center;
+      align-self: center; }
+  .resume-single-type-v1 .single-candidate-head-right .booking-button a {
+    font-family: "Quicksand",sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    vertical-align: middle;
+    border-radius: 4px;
+    padding: 8px 40px;
+    border: 2px solid #022d39; }
+  .resume-single-type-v1 .single-candidate-head-right .booking-button i {
+    font-size: 20px;
+    padding-left: 8px;
+    color: #f2a106;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease; }
+  .resume-single-type-v1 .single-candidate-head-right .booking-button a:hover {
+    background-color: #022d39;
+    color: #fff; }
+    .resume-single-type-v1 .single-candidate-head-right .booking-button a:hover i {
+      color: #fff; }
+
+.single-resume-head:before:before {
+  background-image: none !important;
+  background-color: rgba(0, 0, 0, 0.5) !important; }
+
 @media (min-width: 576px) {
     .counselor-block {
       grid-template-columns: 50% 50%; } }
@@ -517,7 +568,10 @@ body:not(.home) .site-content-page-header .site-content-page-header-inner {
       .benefit-block .benefit-block-text {
         display: inline-block;
         vertical-align: top;
-        width: calc(100% - 265px); } }
+        width: calc(100% - 265px); }
+    .resume-single-type-v1 .single-candidate-head-right .booking-button {
+      -ms-flex-item-align: end;
+          align-self: flex-end; } }
 
 @media (max-width: 1199.98px) {
   .header-transparent + .site-content-page-header {

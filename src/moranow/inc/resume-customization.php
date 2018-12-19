@@ -1,8 +1,19 @@
 <?php
     
 // Content Resume
-add_filter( 'resume_manager_resume_fields', 'moranow_admin_resume_form_fields' );
+add_filter( 'resume_manager_resume_fields', 'moranow_admin_resume_form_fields', 99, 1 );
 function moranow_admin_resume_form_fields( $fields ) {
+
+	unset($fields['_resume_expires']);
+	unset($fields['_candidate_video']);
+	unset($fields['_candidate_twitter']);
+	unset($fields['_candidate_facebook']);
+	unset($fields['_candidate_googleplus']);
+	unset($fields['_candidate_instagram']);
+	unset($fields['_candidate_youtube']);
+	unset($fields['_candidate_behance']);
+	unset($fields['_candidate_pinterest']);
+	unset($fields['_candidate_github']);
 	
 	$fields['_couselor_age'] = array(
 	    'label' 		=> __( 'Age', 'moranow' ),
@@ -13,6 +24,32 @@ function moranow_admin_resume_form_fields( $fields ) {
 
 	return $fields;
 	
+}
+
+add_filter( 'submit_resume_form_fields', 'moranow_submit_resume_form_fields', 99, 1 );
+function moranow_submit_resume_form_fields( $fields ) {
+
+	unset( $fields['resume_fields']['resume_expected_salary'] );
+	unset( $fields['resume_fields']['resume_language'] );
+	unset( $fields['resume_fields']['resume_education_level'] );
+	unset( $fields['resume_fields']['resume_current_salary'] );
+	unset( $fields['resume_fields']['resume_category'] );
+	unset( $fields['resume_fields']['resume_experience'] );
+	unset( $fields['resume_fields']['resume_skills'] );
+	unset( $fields['resume_fields']['resume_age'] );
+	unset( $fields['resume_fields']['resume_gender'] );
+	unset( $fields['resume_fields']['candidate_github'] );
+	unset( $fields['resume_fields']['candidate_pinterest'] );
+	unset( $fields['resume_fields']['candidate_behance'] );
+	unset( $fields['resume_fields']['candidate_youtube'] );
+	unset( $fields['resume_fields']['candidate_instagram'] );
+	unset( $fields['resume_fields']['candidate_twitter'] );
+	unset( $fields['resume_fields']['candidate_googleplus'] );
+	unset( $fields['resume_fields']['candidate_facebook'] );
+	unset( $fields['resume_fields']['candidate_video'] );
+	unset( $fields['resume_fields']['links'] );
+	
+    return $fields;
 }
 
 add_action( 'jobhunt_before_resume_title', 'moranow_template_candidate_image', 10 );

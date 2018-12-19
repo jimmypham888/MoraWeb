@@ -429,6 +429,9 @@ body:not(.home) .site-content-page-header .site-content-page-header-inner {
     .jh-resumes .candidate-image .counselor-name a {
       color: #062d38; }
   .jh-resumes .candidate-image img {
+    max-width: 150px;
+    width: 100px;
+    height: auto;
     margin-bottom: 20px; }
   .jh-resumes .candidate-image .counselor-age {
     font-weight: 700;

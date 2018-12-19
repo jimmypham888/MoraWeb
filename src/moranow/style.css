@@ -497,11 +497,24 @@ body:not(.home) .site-content-page-header .site-content-page-header-inner {
   background-image: none !important;
   background-color: rgba(0, 0, 0, 0.5) !important; }
 
-@media (min-width: 576px) {
+#resume_preview input.button {
+  padding: 12px 40px;
+  border: 2px solid #f2a106 !important; }
+  #resume_preview input.button:hover {
+    color: #fff;
+    background-color: #f2a106; }
+
+input.import-from-linkedin {
+  color: #fff !important;
+  background-color: #0073b1;
+  border-color: #0073b1 !important; }
+  input.import-from-linkedin:hover {
+    background-color: #006097 !important;
+    border-color: #006097 !important; }
+  @media (min-width: 576px) {
     .counselor-block {
       grid-template-columns: 50% 50%; } }
-
-@media (min-width: 768px) {
+  @media (min-width: 768px) {
       #sgpb-popup-dialog-main-div .form-wrapper {
         grid-template-columns: 50% 50%; }
   .how-it-works-section .step {
@@ -535,8 +548,7 @@ body:not(.home) .site-content-page-header .site-content-page-header-inner {
       border-radius: 100%; }
     .jh-resumes .view-resume-action i {
       margin: 0 !important; } }
-
-@media (min-width: 992px) {
+  @media (min-width: 992px) {
     .counselor-block.columns-3 {
       grid-template-columns: 33.3333% 33.3333% 33.3333%; }
     .counselor-block.columns-4 {
@@ -551,8 +563,7 @@ body:not(.home) .site-content-page-header .site-content-page-header-inner {
   .post-type-archive-resume.resume-type-v1.left-sidebar .content-area,
   .post-type-archive-resume.resume-type-v2.left-sidebar .content-area {
     border-left: none; } }
-
-@media (min-width: 1200px) {
+  @media (min-width: 1200px) {
       .benefit-block img {
         opacity: 0;
         visibility: hidden; }
@@ -575,12 +586,10 @@ body:not(.home) .site-content-page-header .site-content-page-header-inner {
     .resume-single-type-v1 .single-candidate-head-right .booking-button {
       -ms-flex-item-align: end;
           align-self: flex-end; } }
-
-@media (max-width: 1199.98px) {
+  @media (max-width: 1199.98px) {
   .header-transparent + .site-content-page-header {
     margin-top: -75px; } }
-
-@media (max-width: 1199px) {
+  @media (max-width: 1199px) {
       .benefit-block .benefit-block-image {
         background-image: none !important; } }
 

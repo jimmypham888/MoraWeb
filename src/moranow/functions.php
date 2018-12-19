@@ -99,7 +99,7 @@ function moranow_top_bar() {
 add_action( 'jobhunt_header_v2', 'moranow_submit_resume', 40 );
 function moranow_submit_resume() {
 	if ( apply_filters( 'jobhunt_header_post_a_job_button', true ) && jobhunt_is_wp_job_manager_activated() ) :
-		$post_a_job_url = apply_filters( 'jobhunt_header_post_a_job_button_url', get_permalink( get_option( 'job_manager_submit_job_form_page_id' ) ) );
+		$post_a_job_url = apply_filters( 'jobhunt_header_post_a_job_button_url', get_permalink( get_option( 'resume_manager_submit_resume_form_page_id' ) ) );
 		$post_a_job_icon = apply_filters( 'jobhunt_header_post_a_job_button_icon', 'la la-plus' );
 		$post_a_job_text = apply_filters( 'jobhunt_header_post_a_job_button_text', esc_html__( 'Post A Job', 'jobhunt' ) );
 		?>

@@ -172,3 +172,24 @@
     background-image: none !important;
     background-color: rgba(0, 0, 0, .5) !important;
 }
+
+#resume_preview input.button {
+    padding: 12px 40px;
+    border: 2px solid #f2a106 !important;
+
+    &:hover {
+        color: #fff;
+        background-color: #f2a106;
+    }
+}
+
+input.import-from-linkedin {
+    color: #fff !important;
+    background-color: #0073b1;
+    border-color: #0073b1 !important;
+
+    &:hover {
+        background-color: #006097 !important;
+        border-color: #006097 !important;
+    }
+}

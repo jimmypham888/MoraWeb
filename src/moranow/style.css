@@ -72,6 +72,9 @@ a {
   background-image: none !important;
   background-color: rgba(0, 0, 0, 0.5) !important; }
 
+body.home .site-content-page-header {
+  background-size: cover !important; }
+
 body:not(.home) .site-content-page-header .site-content-page-header-inner {
   padding-top: 0; }
 
@@ -490,7 +493,7 @@ body:not(.home) .site-content-page-header .site-content-page-header-inner {
     .resume-single-type-v1 .single-candidate-head-right .booking-button a:hover i {
       color: #fff; }
 
-.single-resume-head:before:before {
+.single-resume-head:before {
   background-image: none !important;
   background-color: rgba(0, 0, 0, 0.5) !important; }
 

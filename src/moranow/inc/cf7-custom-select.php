@@ -22,6 +22,8 @@ function custom_counselor_handler( $tag ) {
     $atts['id']     = $tag->get_id_option();
     $atts           = wpcf7_format_atts( $atts );
 
+    $selected_counselor = isset($_POST['counselor']) ? $_POST['counselor'] : '';
+
     $html = '<select ' . $atts . '>';
     $html         .= '<option value="-1">---</option>';
 
@@ -39,7 +41,7 @@ function custom_counselor_handler( $tag ) {
         $slug         = $counselor->post_name;
         $title        = get_the_title($counselor_id);
 
-        $html         .= '<option value="' . $counselor_id . '">' . $title . '</option>';
+        $html         .= '<option value="' . $counselor_id . '"' . ($selected_counselor == $counselor_id ? 'selected="selected"' : '') . ' >' . $title . '</option>';
     endforeach;
     $html .= '</select>';
 

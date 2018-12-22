@@ -140,7 +140,9 @@
             align-self: flex-end;
         }
 
-        a {
+        button {
+            cursor: pointer;
+            outline: none;
             font-family: "Quicksand",sans-serif;
             font-size: 15px;
             font-weight: 700;

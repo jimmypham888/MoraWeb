@@ -493,7 +493,9 @@ body:not(.home) .site-content-page-header .site-content-page-header-inner {
 .resume-single-type-v1 .single-candidate-head-right .booking-button {
   -ms-flex-item-align: center;
       align-self: center; }
-  .resume-single-type-v1 .single-candidate-head-right .booking-button a {
+  .resume-single-type-v1 .single-candidate-head-right .booking-button button {
+    cursor: pointer;
+    outline: none;
     font-family: "Quicksand",sans-serif;
     font-size: 15px;
     font-weight: 700;

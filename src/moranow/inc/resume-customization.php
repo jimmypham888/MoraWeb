@@ -110,9 +110,10 @@ function moranow_template_candidate_view() {
 add_action( 'single_resume_head', 'moranow_booking', 130 );
 function moranow_booking() { ?>
 	<?php if (get_queried_object_id() != get_option( 'resume_manager_submit_resume_form_page_id' )) : ?>
-    <div class="booking-button">
-        <a href="#"><?php esc_html_e( 'Đặt lịch hẹn', 'moranow' ); ?><i class="la la-calendar"></i></a>
-	</div>
+    <form class="booking-button" action="<?php echo esc_url(get_permalink(987)); ?>" method="POST">
+		<input type="hidden" name="counselor" value="<?php echo esc_attr(get_queried_object_id()); ?>">
+        <button type="submit"><?php esc_html_e( 'Đặt lịch hẹn', 'moranow' ); ?><i class="la la-calendar"></i></button>
+</form>
 <?php 
 	endif;
 }

@@ -7,6 +7,23 @@ Template:       jobhunt
 Version:        1.0.0
 Text Domain:    moranow
 */
+.SumoSelect {
+  display: block !important;
+  width: 100% !important; }
+  .SumoSelect:hover .SelectBox {
+    border-color: #8c9aa6 !important; }
+  .SumoSelect .SelectBox {
+    background-color: #f9fafa !important;
+    border-radius: 4px !important;
+    border: 2px solid #d4d9dd !important;
+    height: 42px;
+    line-height: 1.3em;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    -webkit-transition: .2s all ease;
+    transition: .2s all ease;
+    padding: .75em 1em; }
+
 .site-footer .footer-widgets {
   background-color: #062d39; }
 
@@ -372,6 +389,13 @@ body:not(.home) .site-content-page-header .site-content-page-header-inner {
       margin-left: 12px; }
     .counselor-block .view-resume-action a:hover {
       color: #f2a106; }
+
+.kc-contact-form7 input,
+.kc-contact-form7 textarea {
+  margin-bottom: 28px; }
+
+.kc-contact-form7 select {
+  height: 42px; }
 
 .top-bar {
   display: block;

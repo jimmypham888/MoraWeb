@@ -1,0 +1,21 @@
+.SumoSelect {
+    display: block !important;
+    width: 100% !important;
+
+    &:hover {
+        .SelectBox {
+            border-color: #8c9aa6 !important;
+        }
+    }
+
+    .SelectBox {
+        background-color: #f9fafa !important;
+        border-radius: 4px !important;
+        border: 2px solid #d4d9dd !important;
+        height: 42px;
+        line-height: 1.3em;
+        box-shadow: none !important;
+        transition: .2s all ease;
+        padding: .75em 1em;
+    }
+}

@@ -1,5 +1,6 @@
 <?php
 
+require_once 'inc/cf7-custom-select.php';
 require_once 'inc/kc-maps.php';
 require_once 'inc/shortcodes.php';
 require_once 'inc/resume-customization.php';
@@ -7,7 +8,7 @@ require_once 'inc/resume-customization.php';
 // Enqueue styles
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
-	wp_enqueue_style( 'mora-style', get_stylesheet_directory_uri() . '/style.css', array( 'avada-stylesheet' ) );
+	wp_enqueue_style( 'mora-style', get_stylesheet_directory_uri() . '/style.css' );
 
 	wp_enqueue_script( 'mora-script',
 		get_stylesheet_directory_uri() . '/assets/js/script.js',

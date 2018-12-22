@@ -2,8 +2,10 @@
 
 jQuery('document').ready(function($) {
 
-    $('.moranow-select').SumoSelect({
-        search: true,
-        searchText: 'Tìm counselor'
-    });
+    if ($('.moranow-select').length) {
+        $('.moranow-select').SumoSelect({
+            search: true,
+            searchText: 'Tìm counselor'
+        });
+    }
 });

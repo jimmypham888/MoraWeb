@@ -41,7 +41,7 @@ function custom_counselor_handler( $tag ) {
         $slug         = $counselor->post_name;
         $title        = get_the_title($counselor_id);
 
-        $html         .= '<option value="' . $counselor_id . '"' . ($selected_counselor == $counselor_id ? 'selected="selected"' : '') . ' >' . $title . '</option>';
+        $html         .= '<option value="' . $counselor_id . '"' . ' data-name="<?php echo esc_attr($title); ?>"' . ($selected_counselor == $counselor_id ? 'selected="selected"' : '') . ' >' . $title . '</option>';
     endforeach;
     $html .= '</select>';
 

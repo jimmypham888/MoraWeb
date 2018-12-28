@@ -24,6 +24,20 @@ Text Domain:    moranow
     transition: .2s all ease;
     padding: .75em 1em; }
 
+#customer_login .woocommerce-Button,
+.woocommerce-form.woocommerce-form-login .woocommerce-Button,
+.woocommerce-ResetPassword .woocommerce-Button,
+.jobhunt-register-login-form .tab-content input[type="submit"] {
+  background-color: transparent;
+  border-color: #f2a106; }
+  #customer_login .woocommerce-Button:hover,
+  .woocommerce-form.woocommerce-form-login .woocommerce-Button:hover,
+  .woocommerce-ResetPassword .woocommerce-Button:hover,
+  .jobhunt-register-login-form .tab-content input[type="submit"]:hover {
+    background-color: #062d39;
+    border-color: #062d39;
+    color: #fff; }
+
 .site-footer .footer-widgets {
   background-color: #062d39; }
 

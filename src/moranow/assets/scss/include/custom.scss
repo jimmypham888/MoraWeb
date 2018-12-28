@@ -19,3 +19,17 @@
         padding: .75em 1em;
     }
 }
+
+#customer_login .woocommerce-Button,
+.woocommerce-form.woocommerce-form-login .woocommerce-Button,
+.woocommerce-ResetPassword .woocommerce-Button,
+.jobhunt-register-login-form .tab-content input[type="submit"] {
+    background-color: transparent;
+    border-color: #f2a106;
+
+    &:hover {
+        background-color: #062d39;
+        border-color: #062d39;
+        color: #fff;
+    }
+}

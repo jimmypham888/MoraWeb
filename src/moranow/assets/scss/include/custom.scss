@@ -33,3 +33,15 @@
         color: #fff;
     }
 }
+
+.post-readmore a:hover,
+input[type="submit"]:hover,
+.job-manager-form input[type="button"]:hover,
+.comment-respond .comment-form input[type="submit"]:hover,
+.job-categories-section .action .action-link:hover,
+.job-list-section .load_more_jobs:hover,
+.job-list-tab-section .load_more_jobs:hover,
+.woocommerce-MyAccount-content .woocommerce-Address .edit:hover,
+.apply_with_resume input[type="submit"]:hover {
+    color: #fff;
+}

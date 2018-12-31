@@ -36,12 +36,10 @@ function custom_counselor_handler( $tag ) {
 
     foreach ( $counselors as $counselor ):
 
-        $counselor_id = $counselor->ID;
+        $counselor_id   = $counselor->ID;
+        $counselor_name = get_the_title($counselor_id);
 
-        $slug         = $counselor->post_name;
-        $title        = get_the_title($counselor_id);
-
-        $html         .= '<option value="' . $counselor_id . '"' . ' data-name="<?php echo esc_attr($title); ?>"' . ($selected_counselor == $counselor_id ? 'selected="selected"' : '') . ' >' . $title . '</option>';
+        $html         .= '<option value="' . $counselor_name . '" data-id="' . $counselor_id . '" ' . ($selected_counselor == $counselor_id ? 'selected="selected"' : '') . ' >' . $counselor_name . '</option>';
     endforeach;
     $html .= '</select>';
 

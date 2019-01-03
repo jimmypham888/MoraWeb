@@ -33,7 +33,7 @@ function moranow_submit_resume_form_fields( $fields ) {
 	unset( $fields['resume_fields']['resume_language'] );
 	unset( $fields['resume_fields']['resume_education_level'] );
 	unset( $fields['resume_fields']['resume_current_salary'] );
-	unset( $fields['resume_fields']['resume_category'] );
+	unset( $fields['resume_fields']['candidate_awards'] );
 	unset( $fields['resume_fields']['resume_experience'] );
 	unset( $fields['resume_fields']['resume_skills'] );
 	unset( $fields['resume_fields']['resume_age'] );
